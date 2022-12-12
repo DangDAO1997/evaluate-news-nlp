@@ -4,8 +4,7 @@ function checkForName(inputText) {
     const re = new RegExp("^[a-zA-Z 0-9]+$");
 
     if (!re.test(inputText)) {
-        alert("Name Invalid!");
-        return false;
+        return "Name Invalid!";
     }
 
     let names = [
@@ -17,9 +16,8 @@ function checkForName(inputText) {
     ];
 
     if(names.includes(inputText)) {
-        alert("Welcome, Captain!")
+        return "Welcome, Captain!";
     }
-    return true;
 }
 
 export { checkForName }
